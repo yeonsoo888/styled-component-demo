@@ -114,6 +114,7 @@ function Button({ children, color, outline, size, block, active }) {
     cursor: pointer;
     transition: .3s ease;
 
+    &.active,
     &:hover {
       filter: brightness(85%);
     }
