@@ -27,6 +27,8 @@ function App() {
         <Button color="primary">val:1</Button>
         <Button color="primary">val:2</Button>
         <Button color="primary">val:3</Button>
+        <Button color="primary">val:4</Button>
+        <Button color="primary">val:5</Button>
       </ButtonGroup>
     </div>
   );
