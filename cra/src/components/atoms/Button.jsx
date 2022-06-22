@@ -30,7 +30,7 @@ function Button({ children, color, outline, size, block, active }) {
     },
     {
       name: "info",
-      bgColor: "##04caf0",
+      bgColor: "#04caf0",
       fntColor: "#050401",
     },
     {
