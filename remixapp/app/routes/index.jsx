@@ -1,32 +1,12 @@
+import Button from "./components/atoms/Button";
+
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
-        </li>
-      </ul>
+        <Button>짧은</Button>
+        <Button color="#000" background="#ffff99">긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글</Button>
+        <Button color="#000" background="#ff9999">Hello</Button>
+        <Button color="#fff" background="#9999ff">hi</Button>
     </div>
   );
 }
