@@ -30,6 +30,7 @@ function ButtonGroup({ children, type }) {
 
     const StyledBtnGroup = styled.div`
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: 0.5rem;
     `;

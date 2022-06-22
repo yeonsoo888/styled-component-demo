@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-function Button({ children, color, outline, size, block, active }) {
   const arrBtnSet = [
     {
       name: "primary",
@@ -45,7 +44,7 @@ function Button({ children, color, outline, size, block, active }) {
     },
   ];
 
-  const StyledButton = styled.button`
+  const Button = styled.button`
     font-size: ${(prop) => {
       if (prop.size === "sm") {
         return "1rem";
@@ -60,9 +59,9 @@ function Button({ children, color, outline, size, block, active }) {
       if (prop.color !== "") {
         let fntColor;
         return (fntColor = arrBtnSet.map((item) => {
-          if (item.name === prop.color && prop.outline) {
+          if (item.name === prop.color && !prop.outline) {
             return item.fntColor;
-          } else if (item.name === prop.color && !prop.outline) {
+          } else if (item.name === prop.color && prop.outline) {
             return item.bgColor;
           }
         }));
@@ -73,9 +72,9 @@ function Button({ children, color, outline, size, block, active }) {
       if (prop.color !== "") {
         let bgColor;
         return (bgColor = arrBtnSet.map((item) => {
-          if (item.name === prop.color && prop.outline) {
+          if (item.name === prop.color && !prop.outline) {
             return item.bgColor;
-          } else if (item.name === prop.color && !prop.outline) {
+          } else if (item.name === prop.color && prop.outline) {
             return "transparent";
           }
         }));
@@ -83,7 +82,7 @@ function Button({ children, color, outline, size, block, active }) {
     }};
 
     border: ${(prop) => {
-      if (!prop.outline) {
+      if (prop.outline) {
         let bdColor;
         return (bdColor = arrBtnSet.map((item) => {
           if (item.name === prop.color) {
@@ -100,7 +99,7 @@ function Button({ children, color, outline, size, block, active }) {
     min-width: 50px;
 
     width: ${(prop) => {
-      if (!prop.block) {
+      if (prop.block) {
         return "100%";
       }
     }};
@@ -119,20 +118,4 @@ function Button({ children, color, outline, size, block, active }) {
       filter: brightness(85%);
     }
   `;
-
-  return (
-    <>
-      <StyledButton
-        color={color}
-        outline={!outline}
-        size={size}
-        block={!block}
-        active={!active}
-      >
-        {children}
-      </StyledButton>
-    </>
-  );
-}
-
 export default Button;
