@@ -118,9 +118,6 @@ function Button({ children, color, outline, size, block, active }) {
     &:hover {
       filter: brightness(85%);
     }
-    & + button {
-      margin: 0 0 0 1rem;
-    }
   `;
 
   return (

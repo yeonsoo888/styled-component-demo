@@ -18,8 +18,10 @@ function ButtonGroup({ children, type }) {
                     }
                 } 
                 if (type === "radio") {
-                    console.log(e.target);
-                    eachEl.classList.remove("active");
+                    const siblings = e.target.parentElement.children;
+                    for(let j = 0; j < siblings.length; j++ ) {
+                        siblings[j].classList.remove('active');
+                    }
                     e.target.classList.add("active");
                 }
             })
@@ -27,7 +29,9 @@ function ButtonGroup({ children, type }) {
     },[elGroup])
 
     const StyledBtnGroup = styled.div`
-
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
     `;
 
     return (
