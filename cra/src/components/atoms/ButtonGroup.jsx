@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 function ButtonGroup({ children, type }) {
     const elGroup = useRef(null);
-    const [activeNum,setActiveNum] = useState(0);
     useEffect(() => {
         const elChildren = elGroup.current.children;
         const childLeng = elChildren.length;
