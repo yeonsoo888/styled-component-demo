@@ -34,10 +34,15 @@ function App() {
       <h4>drop down</h4>
       <ButtonGroup type="dropDown">
         <Button color="primary">dropdown</Button>
-        <DropBox animate="slideDown">
+        <DropBox>
           <li>target1</li>
           <li>target2</li>
           <li>target3</li>
+          <li>target4</li>
+          <li>target4</li>
+          <li>target4</li>
+          <li>target4</li>
+          <li>target4</li>
           <li>target4</li>
         </DropBox>
       </ButtonGroup>
