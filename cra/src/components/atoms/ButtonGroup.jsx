@@ -45,6 +45,7 @@ function ButtonGroup({ children, type }) {
         gap: 0.5rem;
         
         ${prop => prop.type === "dropDown" && css`
+            position: relative;
             max-width: 300px;
             margin: 0 auto;
             text-align: center;

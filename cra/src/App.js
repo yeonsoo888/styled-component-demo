@@ -34,7 +34,7 @@ function App() {
       <h4>drop down</h4>
       <ButtonGroup type="dropDown">
         <Button color="primary">dropdown</Button>
-        <DropBox>
+        <DropBox animate="slideDown">
           <li>target1</li>
           <li>target2</li>
           <li>target3</li>
