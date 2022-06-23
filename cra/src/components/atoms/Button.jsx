@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
   const arrBtnSet = [
@@ -48,7 +47,7 @@ import styled from "styled-components";
     font-size: ${(prop) => {
       if (prop.size === "sm") {
         return "1rem";
-      } else {
+      } else if(prop.size === "lg" || !prop.size) {
         return "1.5rem";
       }
     }};

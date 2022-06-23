@@ -1,5 +1,5 @@
 import { useState ,useEffect, useRef } from "react";
-import styled from "styled-components";
+import styled , { css } from "styled-components";
 
 function ButtonGroup({ children, type }) {
     const elGroup = useRef(null);
@@ -15,8 +15,7 @@ function ButtonGroup({ children, type }) {
                     } else {
                         e.target.classList.add("active");
                     }
-                } 
-                if (type === "radio") {
+                } else if (type === "radio") {
                     const siblings = e.target.parentElement.children;
                     for(let j = 0; j < siblings.length; j++ ) {
                         siblings[j].classList.remove('active');
@@ -25,13 +24,31 @@ function ButtonGroup({ children, type }) {
                 }
             })
         }
+
+        if(type === "dropDown") {
+            elGroup.current.querySelector("button").addEventListener("click",(e) => {
+                let that = e.target;
+                if(that.classList.contains("on")) {
+                    that.classList.remove("on");
+                } else {
+                    that.classList.add("on");
+                }
+            })
+        }
+        
     },[elGroup])
 
     const StyledBtnGroup = styled.div`
-        display: flex;
+        display: ${prop => prop.type === "dropDown" ? "block" : "flex"};
         flex-wrap: wrap;
         justify-content: center;
         gap: 0.5rem;
+        
+        ${prop => prop.type === "dropDown" && css`
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        `}
     `;
 
     return (

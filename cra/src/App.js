@@ -3,12 +3,13 @@ import './App.css';
 
 import Button from './components/atoms/Button';
 import ButtonGroup from './components/atoms/ButtonGroup';
+import DropBox from './components/atoms/DropBox';
 function App() {
   return (
     <div className="App">
       <div style={{display: "flex", flexWrap:"wrap", gap: "0.5rem", justifyContent: "center",}}>
         <Button color="primary" size="sm">짧은</Button>
-        <Button color="secondary" outline={true} size="large">긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글</Button>
+        <Button color="secondary" outline={true} size="lg">긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글긴글</Button>
         <Button color="success" >Hello</Button>
         <Button color="danger" >hi</Button>
         <Button color="warning" >hi</Button>
@@ -29,6 +30,16 @@ function App() {
         <Button color="primary">val:3</Button>
         <Button color="primary">val:4</Button>
         <Button color="primary">val:5</Button>
+      </ButtonGroup>
+      <h4>drop down</h4>
+      <ButtonGroup type="dropDown">
+        <Button color="primary">dropdown</Button>
+        <DropBox>
+          <li>target1</li>
+          <li>target2</li>
+          <li>target3</li>
+          <li>target4</li>
+        </DropBox>
       </ButtonGroup>
     </div>
   );
